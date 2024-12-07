@@ -14,12 +14,21 @@ if len(argv) < 3:
     exit(1)
 
 # load and prepare schema
-xmlschema_doc = etree.parse(argv[1])
+try:
+    xmlschema_doc = etree.parse(argv[1])
+except etree.XMLSyntaxError:
+    print(f"{argv[1]} invalid or missing schema file")
+    exit(2)
 xmlschema = etree.XMLSchema(xmlschema_doc)
 for xml in argv[2:]:
     etree.clear_error_log()
     print("-"*60)
-    doc = etree.parse(xml)
+    try:
+        doc = etree.parse(xml)
+    except (OSError, etree.XMLSyntaxError):
+        print(f"{xml} invalid or missing XML/GML file")
+        continue
+        
     valid = xmlschema.validate(doc)
     if not valid:
         print(xmlschema.error_log.last_error)

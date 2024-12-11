@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """ XML validator
 
@@ -6,7 +6,7 @@
 
     usage validator.py XSD_schema xml_file [xml_file [...]]
 """
-from sys import argv
+from sys import argv, exit
 from lxml import etree
 
 if len(argv) < 3:

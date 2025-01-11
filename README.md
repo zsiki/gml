@@ -7,6 +7,10 @@ Utilities for GML/XML format
 It validates an XML/GML document to a specified xsd schema. It has only command
 line interface.
 
+### Rrerequisites
+
+Before using the script, don't forget to install the [lxml](https://lxml.de/) library!
+
 ### Usage
 
 validate.py xsd-file gml-file [gml-file ...]

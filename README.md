@@ -16,7 +16,7 @@ first error.
 
 ### IMPORTANT NOTE for Hungarian Eing users
 
-There is a local reference to GML standard in EING_GML_szabvany_leiras_2.x.xsd and vazrajz.xsd (this is included in the QGIS-GML import/export plugin). It supposes thatű
+There is a local reference to GML standard in EING_GML_szabvany_leiras_2.x.xsd and vazrajz.xsd (this is included in the QGIS-GML import/export plugin). It supposes that
 you downloaded the whole GML standard (several xsd files). Please edit
 the 10th line and change *schemaLocation*.
 

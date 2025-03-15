@@ -18,7 +18,7 @@ validate.py xsd-file gml-file [gml-file ...]
 More XML/GML files can be given on the command line. Validation stops on the the
 first error.
 
-### IMPORTANT NOTE for Hungarian Eing users
+### IMPORTANT NOTES for Hungarian E-ING users
 
 There is a local reference to GML standard in EING_GML_szabvany_leiras_2.x.xsd and vazrajz.xsd (this is included in the QGIS-GML import/export plugin). It supposes that
 you downloaded the whole GML standard (several xsd files). Please edit
@@ -35,6 +35,8 @@ Corrected line for GML validator:
 ```
 <import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
 ```
+
+A **new schema** has been released [EING XSD 2.4](https://www.foldhivatal.hu/images/E_ING_GML/XSD_2_4/eing_xsd_szavany_2_4.doc) version on the 4th of March 2025. No change in the source code is necessary to use the new schema.
 
 ### Sample
 
